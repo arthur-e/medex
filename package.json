@@ -1,0 +1,15 @@
+{
+    "name": "medex",
+    "version": "0.0.1",
+    "private": true,
+    "preferGlobal": false,
+    "dependencies": {
+        "requirejs": "latest",
+        "underscore": "1.4.4",
+        "d3": "3.2.3"
+    },
+    "repository": {
+        "type": "git",
+        "url": "/"
+    }
+}
