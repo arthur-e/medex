@@ -19,6 +19,8 @@ requirejs.config({
     ]
 });
 
+// See: http://bl.ocks.org/mbostock/3750941
+
 require([
     'd3',
 ], function (d3) {
@@ -75,6 +77,7 @@ require([
         dim = 200;
 
         attrs = {
+            'fill': 'rgb(51,51,51)',
             'fill-rule': 'evenodd',
             'clip-rule': 'evenodd',
             'class': 'arrow',
@@ -84,9 +87,13 @@ require([
         panes.up.append('path')
         .attr(attrs)
         .attr('transform', [
-            'translate(' + ((svgW / 2) - (dim / 2)) + ', ' + ((svgW / 4) - (dim / 2)) + ')',
+            'translate(' + ((svgW / 2) - (dim / 2)) + ', ' + ((svgH / 3) - (dim / 2)) + ')',
             'scale(2, 2)'
-        ].join(' '));
+        ].join(' '))
+        .on('mouseover', function () {
+        })
+        .on('mouseout', function () {
+        });
 
         panes.down.append('path')
         .attr(attrs)
